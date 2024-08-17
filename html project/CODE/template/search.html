@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>Search</title>
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <style>
+    body {
+      background-color: #212129;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .search-btn, .close-btn {
+      width: 40px;
+      height: 40px;
+      font-size: 25px;
+      background-color: #212129;
+      color: white;
+      border: none;
+      cursor: pointer;
+      position: absolute;
+      transition: all 0.25 ease;
+      
+    }
+
+    .close-btn {
+      color: rgb(225, 83, 26);
+      z-index: -1;
+    }
+
+    .search-box {
+      width: 40px;
+      height: 40px;
+      padding: 15px;
+      border-radius: 25px;
+      background-color: black;
+      color: white;
+      outline: none;
+      border: none;
+      transition: width 0.25 ease;
+      
+    }
+
+    .search {
+      display: flex;
+      align-items: center;
+
+    }
+    .active  .search-box{
+      width: 250px;
+    }
+
+
+    .active  .search-btn{
+      transform: translate(210px, 2px) scale(0.8);
+      background-color:transparent;
+    }
+
+    .active  .close-btn{
+      z-index: 0;
+      transform: translate(250px, 2px) scale(0.8);
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="search active">
+    <input type="text" class="search-box" placeholder="Search ..." />
+    <button class="search-btn"><i class="ph-bold ph-magnifying-glass"></i></button>
+    <button class="close-btn"><i class="ph-bold ph-x"></i></button>
+
+  </div>
+
+  <script>
+    const searchBox = document.querySelector(".search-box");
+const searchBtn = document.querySelector(".search-btn");
+const search = document.querySelector(".search");
+const closeBtn = document.querySelector(".close-btn");
+
+searchBtn.addEventListener("click", function(){
+    console.log(search.classList.contains("active"))
+    if(search.classList.contains("active")){
+        searchBox.value="";
+    }
+    else{
+        search.classList.add("active");
+        searchBox.focus();
+    }
+})
+
+closeBtn.addEventListener("click", function(){
+    search.classList.remove("active");
+    searchBox.value ="";
+})
+
+  </script>
+</body>
+
+</html>

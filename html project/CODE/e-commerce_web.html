@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     
+    <title>manish store</title>
+    <link rel="stylesheet" href="e-commerce.css">
+</head>
+<body>
+    <header>
+        
+            
+            <div  class="logo1" >     
+                    <img class="logo1"src= "image\k1.jpg" width="1500" height="500">
+                     
+            </div>
+            <div class="logo">
+                <h1>Manish store</h1><br>
+            </div> 
+            <div >
+               <a href="template/kamaljeet1.html" class="login">Login</a>
+              
+            
+            </div>
+            <br>       
+                <div class="content">
+                <h4> Welcome to  Manish  store </h4><br>
+                <h5>Lets you activate your medical  store instantly with payment gateway,</h5><br>
+                <h5> shipping & reach your customers anytime, anywhere and grow your business quicker, smarter.</h5>         
+            </div>
+                
+            <nav>
+                <div id="kk"class="search active">
+                    <input type="text" class="search-box" placeholder="Search ..." />
+                    <button >search</button>
+                
+                  </div>
+                
+                <ul >
+                    <li><a href="template/home.html" class="a1">Home</a></li>
+                    <li><a href="index.html" class="a1">Contact</a></li>
+                    <li><a href="template/about.html" class="a1">About-us</a></li>
+                    <li><a href="template/pravacy.htm" class="a1">Disclaimer</a></li>
+                    <li><a href="Cart" class="a1">Product</a></li>
+                </ul>
+            </nav>
+         
+    </header>
+    
+    
+    <main>
+
+        <!-- section one -->
+
+        <section class="products">
+            <h2 >&nbsp;&nbsp;&nbsp;AC</h2>
+            <div class="product-list">
+                <div class="product-item">
+                    <img src= "image/air conditioner.jpeg" alt="Ac ">
+                    <h3>Ac</h3>
+                    <p>$10.00</p>
+                     <a href="template/payment.html " class="btn-11">Pay</a>
+                </div>
+                <div class="product-item">
+                    <img src="image/ac.png" alt="AC">
+                    <h3>AC</h3>
+                    <p>$20.00</p>
+                    <a href="template/payment.html " class="btn-11">Pay</a>
+                </div>
+
+                <div class="product-item">
+                    <img src= "image/air conditioner.jpeg" alt="AC">
+                    <h3>AC</h3>
+                    <p>$10.00</p>
+                    <a href="template/payment.html " class="btn-11">Pay</a>
+                </div>
+                <div class="product-item">
+                    <img src= "image/ac.png" alt="AC">
+                    <h3>AC</h3>
+                    <p>$20.00</p>
+                    <a href="template/payment.html " class="btn-11">Pay</a>
+                </div>
+
+                <div class="product-item">
+                    <img src= "image/air conditioner.jpeg" alt="AC">
+                    <h3>AC</h3>
+                    <p>$10.00</p>
+                    <a href="template/payment.html " class="btn-11">Pay</a>
+                </div>
+                 
+                <!-- Add more products as needed -->
+            </div>
+        </section>
+   <!--  section second -->
+
+        <section class="products">
+            <h2>&nbsp;&nbsp;&nbsp;Iphone</h2>
+            <div class="product-list">
+                <div class="product-item">
+                    <img src= "image/iphone.jpeg" alt="Iphone">
+                    <h3>Iphone</h3>
+                    <p>$10.00</p>
+                    <a href="template/payment.html " class="btn-11">Pay</a>
+                </div>
+                <div class="product-item">
+                    <img src= "image/ihpone2.jpeg" alt="Iphone">
+                    <h3>Iphone</h3>
+                    <p>$20.00</p>
+                    <a href="template/payment.html " class="btn-11">Pay</a>
+                </div>
+
+                <div class="product-item">
+                    <img src= "image/iphone3.jpg" alt="Iphone">
+                    <h3>Iphone</h3>
+                    <p>$10.00</p>
+                    <a href="template/payment.html " class="btn-11">Pay</a>
+                </div>
+                <div class="product-item">
+                    <img src= "image/iphone.jpeg" alt="Iphone">
+                    <h3>Iphone</h3>
+                    <p>$20.00</p>
+                    <a href="template/payment.html " class="btn-11">Pay</a>
+                </div>
+
+                <div class="product-item">
+                    <img src= "image/ihpone2.jpeg" alt="Iphone">
+                    <h3>Iphone</h3>
+                    <p>$10.00</p>
+                    <a href="template/payment.html " class="btn-11">Pay</a>
+                </div>
+                 
+                <!-- Add more products as needed -->
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+         
+        &nbsp;
+        <p > &nbsp;&nbsp;Copyright&nbsp; &copy; 2024 My E-commerce Store</p>
+    </footer>
+    <script>
+        const searchBox = document.querySelector(".search-box");
+    const searchBtn = document.querySelector(".search-btn");
+    const search = document.querySelector(".search");
+    const closeBtn = document.querySelector(".close-btn");
+    
+    searchBtn.addEventListener("click", function(){
+        console.log(search.classList.contains("active"))
+        if(search.classList.contains("active")){
+            searchBox.value="";
+        }
+        else{
+            search.classList.add("active");
+            searchBox.focus();
+        }
+    })
+    
+    closeBtn.addEventListener("click", function(){
+        search.classList.remove("active");
+        searchBox.value ="";
+    })
+    
+      </script>
+</body>
+</html>

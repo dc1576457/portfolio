@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     
+    <title>Student Details</title>
+    <style>
+        body{
+            background-color:#eee;
+            
+        }
+        h1 ,h2,h3,h4,h5,h6{
+            margin: 0;
+            padding: 0;
+        }
+        .box{padding-bottom: 10px;
+            background-color:#eee;
+            width: 450px;
+            box-shadow:2px 2px 5px black, 2px 2px 5px black ;
+            margin-right:30px ;
+        }
+        .title{
+            background-color:black;
+            color:#fff;
+            padding: 10px;
+            text-align: center;
+        }
+        
+        .fields{
+            padding: 12px 20px;
+            justify-content: space-between;
+        }
+        .fields > label{
+            width: 200px;
+            display: inline-block;
+        
+        }
+        
+        .btn{
+            margin-top: 10px;
+            margin-left: 4vw;
+            padding: 10px 24px;
+            background-color:lightblue;
+            border-radius:10px;
+            border:2px solid blueviolet;
+            box-shadow:0px 0px 8px black;
+            cursor: pointer;
+             
+        }
+        .container{
+            display:flex;
+             
+        }
+        
+        .btn.print{
+            margin-top:10px;
+            margin-left: 10vw;
+            cursor: pointer;
+        }
+        .imageContainer{
+            width: 75px;
+            height:75px;
+            background-color:#fff;
+            box-shadow:0 0 8px black;
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            padding: 20px;
+            box-sizing:border-box;
+            margin: 10px auto 0;
+        
+        }
+        img{
+            max-width: 100%;
+            max-height: 100%;
+        }
+        
+         
+         
+        
+        @media print{
+            body {
+                 background-color:black;
+            }
+        
+            .inputs{
+                display: none;
+            }    
+            .btn.Print{
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box  inputs">
+            <h1 class="title">Student Details</h1>
+            <form>
+                <div class="fields">
+                    <label for="schoolName">School Name :</label>
+                    <input id="schoolName" />
+                </div>
+                <div class="fields">
+                    <label for="studentName">Student Name :</label>
+                    <input id="studentName" />
+                </div>
+                <div class="fields">
+                    <label for="rollNumber">Roll Number :</label>
+                    <input id="rollNumber" type="number" />
+                </div>
+                <div class="fields">
+                    <label for=" dateOfBirth">Date Of Birth : </label>
+                    <input id="dateOfBirth" type="date"/>
+                </div>
+                <div class="fields">
+                    <label for="class">Class :</label>
+                    <input id="class" />
+                </div>
+                <div class="fields">
+                    <label for="contactNumber">Contact Number :</label>
+                    <input id="contactNumber" type="number" />
+                </div>
+                <div>
+                    <label for="img">Student Photo:</label>
+                    <input id="img" type="file"/>
+                </div>
+                <div class="butt">
+                    <button class="btn" type="button" onclick="updateCard()">Submitted</button>
+                    <button class="btn m1-10" type="button" onclick="clearAll()">Clear All</button>
+                </div>
+            </form>
+        </div>
+
+
+        <div class="box cards">
+            <h1 class="title" id="schoolNameVal">School Name</h1>
+            <div class="imageContainer">
+                <img id="imageVal" src="img" alt="Student photo" />
+            </div>
+
+            <div class="fields">
+                <label>Student Name :</label>
+                <label id="studentNameVal"> </label>
+            </div>
+            <div class="fields">
+                <label>Date of Birth :</label>
+                <label id="dateOfBirthVal"> </label>
+            </div>
+            <div class="fields">
+                <label>Class :</label>
+                <label id="classVal"> </label>
+            </div>
+            <div class="fields">
+                <label>Roll Number :</label>
+                <label id="rollNumberVal"> </label>
+            </div>
+            <div class="fields">
+                <label>Contact Number :</label>
+                <label id="contactNumberVal"> </label>
+            </div>
+
+            <button class="btn Print" type="button" onclick="printCard()"> Print Card</button>
+
+        </div>
+
+
+
+    </div>
+
+    <script >  
+        function updateCard(){
+            document.getElementById("schoolNameVal").innerHTML=document.getElementById("schoolName").value;
+            document.getElementById("studentNameVal").innerHTML=document.getElementById("studentName").value;
+            document.getElementById("dateOfBirthVal").innerHTML=document.getElementById("rollNumber").value;
+            document.getElementById("classVal").innerHTML=document.getElementById("dateOfBirth").value;
+            document.getElementById("rollNumberVal").innerHTML=document.getElementById("class").value;
+            document.getElementById("contactNumberVal").innerHTML=document.getElementById("contactNumber").value;
+            document.getElementById("imgVal").innerHTML=document.getElementById(" img").value;
+          
+            
+        }
+        
+        function clearAll(){
+            document.getElementById("schoolName").innerHTML="";
+            document.getElementById("studentName").innerHTML="";
+            document.getElementById("rollNumber").innerHTML="";
+            document.getElementById("dateOfBirth").innerHTML="";
+            document.getElementById("class").innerHTML="";
+            document.getElementById("contactNumber").innerHTML="";
+        
+        }
+        
+        function printCard(){
+            x=window.print();
+        }
+    </script>
+</body>
+
+</html>

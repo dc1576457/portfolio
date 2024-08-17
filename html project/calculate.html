@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate</title>
+     <link rel="stylesheet" href="calculatro.css"/>
+</head>
+<body>
+    
+    <table id="calclute">
+        <tr  >
+            <td colspan="3">
+                <input type="text" id="result"  readonly/>
+            </td>
+
+        </tr>
+
+        <tr  >
+            <td><input class="btn" type="button" value="Ac"
+                onclick="
+                totalValue = '';
+                document.querySelector('#result').value = totalValue; 
+                "
+                ></td>
+            <td><input class="btn" type="button" value="Del"
+                onclick="
+                totalValue = totalValue.toString().slice(0, -1);
+                document.querySelector('#result').value = totalValue; 
+                "
+                ></td>
+
+
+            <td><input class="btn" type="button" value="/"
+                onclick="
+                totalValue = totalValue +'/';
+                document.querySelector('#result').value = totalValue; 
+                "
+                ></td>
+            
+        </tr>
+        
+        <tr>
+            
+            <td><input  class="btn" type="button" value="+"
+                onclick="
+                totalValue = totalValue +'+';
+                document.querySelector('#result').value = totalValue; 
+                "
+                ></td>
+            <td><input class="btn" type="button" value="*"
+                onclick="
+                totalValue = totalValue +'*';
+                document.querySelector('#result').value = totalValue; 
+                "
+                ></td>
+            <td><input class="btn" type="button" value="-"
+                onclick="
+                totalValue = totalValue +'-';
+                document.querySelector('#result').value = totalValue; 
+                "
+                ></td>
+        
+            
+        </tr>
+
+
+        <!-- <tr> tag  basically  used for column and <td> tag basically used for row.-->
+        <tr>
+            <td><input type="button" value="1"   onclick="
+                totalValue = totalValue +'1';
+                document.querySelector('#result').value = totalValue; 
+                "></td>
+
+            <td><input type="button" value="2"
+                onclick="
+                totalValue = totalValue +'2';
+                document.querySelector('#result').value = totalValue; 
+                "
+            ></td>
+            <td><input type="button" value="3"
+                onclick="
+                totalValue = totalValue +'3';
+                document.querySelector('#result').value = totalValue; 
+                "
+                ></td>
+            
+        </tr>
+
+        <tr>
+            <td><input type="button" value="4"
+                onclick="
+                totalValue = totalValue +'4';
+                document.querySelector('#result').value = totalValue; 
+                "
+                ></td>
+            <td><input type="button" value="5"
+                onclick="
+                totalValue = totalValue +'5';
+                document.querySelector('#result').value = totalValue; 
+                "
+                ></td>
+            <td><input type="button" value="6"
+                onclick="
+                totalValue = totalValue +'6';
+                document.querySelector('#result').value = totalValue; 
+                "
+                ></td>
+            
+        </tr>
+
+        <tr>
+            <td><input type="button" value="7"
+                onclick="
+                totalValue = totalValue +'7';
+                document.querySelector('#result').value = totalValue; 
+                "
+                ></td>
+            <td><input type="button" value="8"
+                onclick="
+                totalValue = totalValue +'8';
+                document.querySelector('#result').value = totalValue; 
+                "
+                ></td>
+            <td><input type="button" value="9"
+                onclick="
+                totalValue = totalValue +'9';
+                document.querySelector('#result').value = totalValue; 
+                "
+                ></td>
+        
+        </tr>
+
+        <tr>
+            <td><input type="button" value="0"
+                onclick="
+                totalValue = totalValue +'0';
+                document.querySelector('#result').value = totalValue; 
+                "
+                ></td>
+            <td><input class="btn" type="button" value="."
+                onclick="
+                totalValue = totalValue +'.';
+                document.querySelector('#result').value = totalValue; 
+                "
+                ></td>
+            <td><input class="bt" type="button" value="="
+                onclick="
+                let totalResult = eval(totalValue);
+                totalValue =totalResult;
+                document.querySelector('#result').value = totalValue; 
+                "
+                ></td>
+            
+        </tr>
+
+    </table>
+<script>
+    let totalValue ="";
+    document.querySelector("result").value = totalValue;
+</script>
+</body>
+</html>
